@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>SPAR-GS</title>
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  
+  <style>
+    body { max-width: 1000px; margin: auto; }
+    h1, h2 { text-align: center; margin-top: 40px; }
+    .section { margin-top: 50px; }
+  </style>
+</head>
+
+<body>
+
+<h1>SPAR-GS</h1>
+<p style="text-align:center;">
+Single-view Pose-free Automobile Reconstruction with 3D Gaussian Splatting
+</p>
+
+<p style="text-align:center;">
+Juntao Lyu, Haochen Yu, Hongyuan Liu, Qi Mei, Huimin Ma, Tianyu Hu*
+</p>
+
+<p style="text-align:center;">
+ICASSP 2026 
+</p>
+
+<div style="text-align:center;">
+  <a href="https://ieeexplore.ieee.org/document/11464917">[Paper]</a>
+  <a href="https://github.com/killer2-1/SPAR-GS">[Code]</a>
+</div>
+
+---
+
+<div class="section">
+<h2>Abstract</h2>
+<p>
+We propose SPAR-GS, a pose-free single-image 3D Gaussian Splatting method that learns vehicle prototypes without requiring camera embedding. Specifically, SPAR-GS enhances feature representation through a bi-plane encoder and incorporates a deformation template to directly learn a normalized 3DGS model, thereby enabling novel view synthesis from a single image. Compared with existing baselines, SPAR-GS achieves significant improvements in both visual quality and computational efficiency, enhancing the consistency of objects with limited views in AD simulation.
+</p>
+</div>
+
+---
+
+<div class="section">
+<h2>Method Overview</h2>
+<img src="assets/main.png" width="100%">
+</div>
+
+---
+
+<div class="section">
+<h2>Key Ideas</h2>
+
+<ul>
+<li>Pose-free reconstruction without camera embedding</li>
+<li>Bi-plane encoding for shape & texture</li>
+<li>Sphere template for normalized 3DGS learning</li>
+</ul>
+
+</div>
+
+---
+
+<div class="section">
+<h2>Results</h2>
+<img src="assets/result1.png" width="100%">
+<img src="assets/result_autorf.png" width="100%">
+<img src="assets/result_real.png" width="100%">
+</div>
+
+---
+
+<div class="section">
+<h2>Citation</h2>
+
+<pre>
+
+@INPROCEEDINGS{11464917,
+  author={Lyu, Juntao and Yu, Haochen and Liu, Hongyuan and Mei, Qi and Ma, Huimin and Hu, Tianyu},
+  booktitle={ICASSP 2026 - 2026 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)}, 
+  title={SPAR-GS: Single-View Pose-Free Automobile Reconstruction with 3D Gaussian Splatting}, 
+  year={2026},
+  doi={10.1109/ICASSP55912.2026.11464917}
+  }
+</pre>
+
+</div>
+
+</body>
+</html>
