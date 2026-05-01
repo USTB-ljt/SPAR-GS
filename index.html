@@ -30,10 +30,10 @@ ICASSP 2026
 
 <div style="text-align:center;">
   <a href="https://ieeexplore.ieee.org/document/11464917">[Paper]</a>
-  <a href="https://github.com/killer2-1/SPAR-GS">[Code]</a>
+  <a href="https://github.com/USTB-ljt/SPAR-GS">[Code]</a>
 </div>
 
----
+
 
 <div class="section">
 <h2>Abstract</h2>
@@ -42,14 +42,23 @@ We propose SPAR-GS, a pose-free single-image 3D Gaussian Splatting method that l
 </p>
 </div>
 
----
+
 
 <div class="section">
 <h2>Method Overview</h2>
 <img src="assets/main.png" width="100%">
+<p>SPAR-GS implements an end-to-end novel view synthesis framework:</p>
+<ul>
+<li>The input RGB image is normalized to resolution rn and up-sampled by FeatUp</li>
+<li>The extracted features are encoded with a bi-plane (θ-φ and φ-θ). </li>
+<li>The features are divided and decoded into two branches (texture and geometry). </li>
+<li>The template is then deformed and textured accordingly. </li>
+<li>The loss is calculated with the mask and the RGB image of the GT input view. </li>
+<li>Using the camera pose is solely for rendering during training, and not to embed in the network.</li>
+</ul>
 </div>
 
----
+
 
 <div class="section">
 <h2>Key Ideas</h2>
@@ -57,21 +66,25 @@ We propose SPAR-GS, a pose-free single-image 3D Gaussian Splatting method that l
 <ul>
 <li>Pose-free reconstruction without camera embedding</li>
 <li>Bi-plane encoding for shape & texture</li>
-<li>Sphere template for normalized 3DGS learning</li>
+<li>Sphere template for normalized 3DGS prototype learning</li>
 </ul>
 
 </div>
 
----
+
 
 <div class="section">
-<h2>Results</h2>
-<img src="assets/result1.png" width="100%">
-<img src="assets/result_autorf.png" width="100%">
-<img src="assets/result_real.png" width="100%">
+<h2>Quantitative Results</h2>
+<img src="assets/comparison.png" width="60%">
+<img src="assets/ablation.png" width="60%">
 </div>
 
----
+<div class="section">
+<h2>Qualitative Results</h2>
+
+<img src="assets/rot_1.gif" width="60%">
+<img src="assets/rot_2.gif" width="60%">
+</div>
 
 <div class="section">
 <h2>Citation</h2>
