@@ -47,15 +47,17 @@ We propose SPAR-GS, a pose-free single-image 3D Gaussian Splatting method that l
 <div class="section">
 <h2>Method Overview</h2>
 <img src="assets/main.png" width="100%">
+<div style="display: flex; justify-content: center;">
+  <ul style="text-align: left; max-width: 600px;">
 <p>SPAR-GS implements an end-to-end novel view synthesis framework:</p>
-<ul>
-<li>The input RGB image is normalized to resolution rn and up-sampled by FeatUp</li>
-<li>The extracted features are encoded with a bi-plane (θ-φ and φ-θ). </li>
-<li>The features are divided and decoded into two branches (texture and geometry). </li>
-<li>The template is then deformed and textured accordingly. </li>
-<li>The loss is calculated with the mask and the RGB image of the GT input view. </li>
-<li>Using the camera pose is solely for rendering during training, and not to embed in the network.</li>
-</ul>
+    <li>The input RGB image is normalized to resolution rn and up-sampled by FeatUp</li>
+    <li>The extracted features are encoded with a bi-plane (θ-φ and φ-θ).</li>
+    <li>The features are divided and decoded into two branches (texture and geometry).</li>
+    <li>The template is then deformed and textured accordingly.</li>
+    <li>The loss is calculated with the mask and the RGB image of the GT input view.</li>
+    <li>Using the camera pose is solely for rendering during training, and not to embed in the network.</li>
+  </ul>
+</div>
 </div>
 
 
@@ -63,11 +65,13 @@ We propose SPAR-GS, a pose-free single-image 3D Gaussian Splatting method that l
 <div class="section">
 <h2>Key Ideas</h2>
 
-<ul>
-<li>Pose-free reconstruction without camera embedding</li>
-<li>Bi-plane encoding for shape & texture</li>
-<li>Sphere template for normalized 3DGS prototype learning</li>
-</ul>
+<div style="display: flex; justify-content: center;">
+  <ul style="text-align: left; max-width: 500px;">
+    <li>Pose-free reconstruction without camera embedding</li>
+    <li>Bi-plane encoding for shape & texture</li>
+    <li>Sphere template for normalized 3DGS prototype learning</li>
+  </ul>
+</div>
 
 </div>
 
